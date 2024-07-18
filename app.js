@@ -3,6 +3,7 @@ import { config } from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import fileUpload from 'express-fileupload';
+import messageRouter from './router/messageRouter.js';
 import { dbConnection } from './database/dbConnection.js';
 
 const app = express();
@@ -25,6 +26,8 @@ app.use(
     tempFileDir: '/tmp/',
   }),
 );
+
+app.use('/api/v1/message', messageRouter);
 
 dbConnection();
 
