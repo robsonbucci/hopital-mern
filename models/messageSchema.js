@@ -5,28 +5,29 @@ const messageSchema = new mongoose.Schema({
   firstName: {
     type: String,
     required: true,
-    minLength: [3, 'First Name Must Contain At least 3 Characters.'],
+    minLength: [3, 'First name must contain at least 3 characters.'],
   },
   lastName: {
     type: String,
     required: true,
-    minLength: [3, 'Last Name Must Contain At least 3 Characters.'],
+    minLength: [3, 'Last name must contain at least 3 characters.'],
   },
+
   email: {
     type: String,
     required: true,
-    validate: [validator.isEmail, 'Please, Provide A Valid Email.'],
+    validate: [validator.isEmail, 'Please, provide a valid email.'],
   },
   phone: {
     type: String,
     required: true,
-    minLength: [11, 'Phone Number Must Contain At least 11 Characters.'],
-    maxLength: [16, 'Phone Number Must Contain Max 16 Characters.'],
+    minLength: [11, 'Phone number must contain at least 11 characters.'],
+    maxLength: [16, 'Phone number must contain max 16 characters.'],
   },
   message: {
     type: String,
     required: true,
-    minLength: [10, 'Message Must Contain At least 10 Characters.'],
+    minLength: [10, 'Message must contain at least 10 characters.'],
   },
 });
 
