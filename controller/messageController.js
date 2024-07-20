@@ -1,4 +1,4 @@
-import { catchAsyncErrors } from '../middlewares/catchAsyncErross.js';
+import { catchAsyncErrors } from '../middlewares/catchAsyncErrors.js';
 import { Message } from '../models/messageSchema.js';
 import ErrorHandler from '../middlewares/errorMiddleware.js';
 
